@@ -1,4 +1,4 @@
-package org.wsnsimulator;
+package org.wsnsimulator.nodes;
 
 public class CommunicationLink {
 

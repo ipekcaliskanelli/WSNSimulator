@@ -1,9 +1,9 @@
-package org.wsnsimulator;
+package org.wsnsimulator.nodes;
 
 public class Location {
 
-	protected int xCoor;
-	protected int yCoor;
+	protected double xCoor;
+	protected double yCoor;
 	
 	public Location(int x, int y) {
 		xCoor=x;

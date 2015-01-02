@@ -1,4 +1,4 @@
-package org.wsnsimulator;
+package org.wsnsimulator.nodes;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ public abstract class SensorNode {
 	protected int batteryCapacity;
 
 	/**
-	 *  Transmission radius of the node in cm.
+	 *  Transmission radius of the node in m.
 	 */
-	protected int transmissionRange;
+	protected double transmissionRange;
 
 	/**
 	 * Energy consumption of the node when idle in uAs.
