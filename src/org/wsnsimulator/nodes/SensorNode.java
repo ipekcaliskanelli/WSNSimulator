@@ -37,11 +37,11 @@ public abstract class SensorNode {
 	/**
 	 * x, y coordinates of the node. 
 	 */
-	protected Location location; 
+	private Location location; 
 
 	public boolean isInTransmissionRange(SensorNode s) {
 
-		return (Math.pow(s.location.xCoor-this.location.xCoor,2)+Math.pow(s.location.yCoor-this.location.yCoor,2)
+		return (Math.pow(s.getLocation().getxCoor()-this.getLocation().getxCoor(),2)+Math.pow(s.getLocation().getyCoor()-this.getLocation().getyCoor(),2)
 				<=Math.pow(this.transmissionRange,2));
 		
 
@@ -59,4 +59,9 @@ public abstract class SensorNode {
 			}
 		}
 	}
+
+	public Location getLocation() {
+		return location;
+	}
+
 }

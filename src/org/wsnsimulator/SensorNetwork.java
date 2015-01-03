@@ -13,6 +13,8 @@ public class SensorNetwork {
 		sensors=new ArrayList<SensorNode>();
 	}
 
-
+	public List<SensorNode> getSensors() {
+		return sensors;
+	}
 	
 }

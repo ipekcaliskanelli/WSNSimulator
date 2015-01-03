@@ -1,18 +1,18 @@
 package org.wsnsimulator.nodes;
 
-public class CommunicationLink {
+public class CommunicationLink<T> {
 
-	protected SensorNode sender;
-	protected SensorNode receiver;
+	protected T sender;
+	protected T receiver;
 	
-	public CommunicationLink(SensorNode sender, SensorNode receiver) {
+	public CommunicationLink(T sender, T receiver) {
 		this.sender=sender;
 		this.receiver=receiver;
 	}
-	public SensorNode getSender() {
+	public T getSender() {
 		return sender;
 	}
-	public SensorNode getReceiver() {
+	public T getReceiver() {
 		return receiver;
 	}
 }

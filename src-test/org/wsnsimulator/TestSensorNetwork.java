@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+import org.wsnsimulator.nodes.CommunicationLink;
+import org.wsnsimulator.nodes.Location;
+import org.wsnsimulator.nodes.SensorNode;
 
 public class TestSensorNetwork {
 
@@ -39,7 +42,7 @@ public class TestSensorNetwork {
 				SensorNode ip = new SensorNode() { };
 				ip.transmissionRange=1;
 				ip.neighbours=new ArrayList<CommunicationLink>();
-				ip.location = new Location(meshx+i, meshy+j);
+				ip.setLocation(new Location(meshx+i, meshy+j));
 				
 				ipy.sensors.add(ip);
 			}
@@ -61,9 +64,9 @@ public class TestSensorNetwork {
 		SensorNode ip1 = new SensorNode() { };
 		SensorNode ip2 = new SensorNode() { };
 		ip1.transmissionRange=1;
-		ip1.location=new Location(0,0);
+		ip1.setLocation(new Location(0,0));
 		ip2.transmissionRange=2;
-		ip2.location=new Location(0,2);
+		ip2.setLocation(new Location(0,2));
 	
 		ip1.neighbours=new ArrayList<CommunicationLink>();
 		ip2.neighbours=new ArrayList<CommunicationLink>();

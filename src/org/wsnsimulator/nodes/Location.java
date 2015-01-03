@@ -2,11 +2,22 @@ package org.wsnsimulator.nodes;
 
 public class Location {
 
-	protected double xCoor;
-	protected double yCoor;
+	private double xCoor;
+	private double yCoor;
 	
-	public Location(int x, int y) {
+	public Location(double x, double y) {
 		xCoor=x;
 		yCoor=y;
 	}
+
+	public double getxCoor() {
+		return xCoor;
+	}
+
+
+	public double getyCoor() {
+		return yCoor;
+	}
+
+	
 }
