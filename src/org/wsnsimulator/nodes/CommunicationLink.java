@@ -15,4 +15,8 @@ public class CommunicationLink<T> {
 	public T getReceiver() {
 		return receiver;
 	}
+	public int getNodeId(SensorNode s) {
+		return s.getNodeID();
+	}
+	
 }
