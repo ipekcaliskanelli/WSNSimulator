@@ -25,6 +25,7 @@ public class PropagationCycle {
 
 						if(cl.getSender()==node) {
 							Pheromone p = new Pheromone(node, cl.getReceiver(), pheromoneAmountToPass, 1);
+							cl.getReceiver().addPheromones(p);
 							passPheromoneToNeighbours(p, cl.getReceiver());
 						}
 					}
@@ -41,6 +42,8 @@ public class PropagationCycle {
 
 				if(cl.getSender()==node) {
 					Pheromone np = new Pheromone(node, cl.getReceiver(), pheromoneAmountToPass/2, 2);
+					cl.getReceiver().addPheromones(p);
+					passPheromoneToNeighbours(p, cl.getReceiver());
 				}
 			}
 			

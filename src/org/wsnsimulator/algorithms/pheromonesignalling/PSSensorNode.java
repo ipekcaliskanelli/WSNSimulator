@@ -35,4 +35,8 @@ public class PSSensorNode extends SensorNode{
 	public void setPheromoneLevel(int pheromoneLevel) {
 		this.pheromoneLevel = pheromoneLevel;
 	}
+	public void addPheromones(Pheromone p) {
+		pheromones.add(p);
+		pheromoneLevel = pheromoneLevel + p.getPheromoneAmount();
+	}
 }
