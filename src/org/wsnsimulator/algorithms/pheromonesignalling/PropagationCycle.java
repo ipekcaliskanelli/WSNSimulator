@@ -10,7 +10,7 @@ public class PropagationCycle {
 	// replace these values with the config.prop values. 
 	protected int pheromoneAmountToPass =60;
 	protected int hopThreshold =2;
-
+	
 	public PropagationCycle(SensorNetwork s) {
 		this.network = s;
 	}
@@ -37,6 +37,12 @@ public class PropagationCycle {
 	
 	public void passPheromoneToNeighbours(Pheromone p, PSSensorNode node) {
 		while(p.getPheromoneHopCount()<=hopThreshold) {
+			for(CommunicationLink<PSSensorNode> cl: node.getNeighbours()) {
+
+				if(cl.getSender()==node) {
+					Pheromone np = new Pheromone(node, cl.getReceiver(), pheromoneAmountToPass/2, 2);
+				}
+			}
 			
 		}
 	}

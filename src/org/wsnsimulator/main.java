@@ -35,7 +35,7 @@ public class main {
 				ip.setNeighbours(new ArrayList<CommunicationLink>());
 				ip.setLocation(new Location(meshx+i, meshy+j));
 				ip.setNodeID(nodeid++);
-				sn.sensors.add(ip);
+				sn.getSensors().add(ip);
 			}
 		}
 		
